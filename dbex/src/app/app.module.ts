@@ -7,6 +7,7 @@ import { UIRouterModule } from '@uirouter/angular';
 import { APP_STATES } from './app.states';
 import { LoginModule } from './login/login.module';
 import { routerConfigFn } from './router.config';
+import { AppServicesModule } from './app-services/app-services.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { routerConfigFn } from './router.config';
       // }
     }),
     LoginModule,
-    FormsModule
+    FormsModule,
+    AppServicesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
