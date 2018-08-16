@@ -3,7 +3,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { forEach, values } from '@uirouter/core';
 
 export class User {
-  constructor(public userName: string, public password: string) {}
+  grant_type: string = 'password';
+  client_id: string = 'ngAuthApp';
+  constructor(public userName: string, public password: string) {
+  }
 }
 @Component({
   selector: 'app-login',
@@ -14,49 +17,30 @@ export class LoginComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
 
-  user: User = {}
+  user: User = new User('', '');
+  
 
   ngOnInit() {
+    console.log(7777, this.user);
   }
 
-  login(user: any) {
-    let userAuth: Object = {
-      grant_type: 'password',
-      client_id: 'ngAuthApp',
-      userName: user.userName,
-      password: user.password
-    }
-
+  login(user: User) {
     let data: Array<string> = [];
 
-    Object.keys(userAuth).forEach((key) => {
-      data.push(encodeURIComponent(key) + '=' + encodeURIComponent(userAuth[key]));
+    Object.keys(user).forEach((key) => {
+      data.push(encodeURIComponent(key) + '=' + encodeURIComponent(user[key]));
     });
 
-    let b = [
-      encodeURIComponent('grant_type') + '=' + encodeURIComponent('password'),
-      encodeURIComponent('client_id') + '=' + encodeURIComponent('ngAuthApp'),
-      encodeURIComponent('userName') + '=' + encodeURIComponent(user.userName),
-      encodeURIComponent('password') + '=' + encodeURIComponent(user.password)
-    ];
-
-    let result: string = b.join('&');
-
-
-
-
-
-    return this.http.post('http://test.dbex.org/api/token', result , {
+    return this.http.post('http://test.dbex.org/api/token', data.join('&') , {
       headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')
-        .set('Accept-Language', 'en-US,en;q=0.8')
     }).subscribe(
-      (data) => {
+      (data: any) => {
         return this.http.post('http://test.dbex.org/api/category/documentsbyfilter', {}, {
-          headers: new HttpHeaders().set('Authorization', 'Bearer ' + data.access_token);
-        }).subscribe((data) => {
+          headers: new HttpHeaders().set('Authorization', 'Bearer ' + data.access_token)
+        }).subscribe((data: any) => {
           console.log(data);
         })
-      };
+      }
     );
   }
 }
