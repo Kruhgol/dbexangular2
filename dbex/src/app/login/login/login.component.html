@@ -2,3 +2,44 @@
   login works!
 </p>
 <h1>LOGIN COMPONENT</h1>
+
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+      <div>
+        <div class="form-row">
+          <label for="userName">Login:</label>
+          <input type="text"
+                class="form-control username"
+                name="username"
+                [(ngModel)]="user.userName"
+                id="username">
+        </div>
+        <div class="form-row">
+          <label for="password">Password:</label>
+          <input type="password"
+                class="form-control password"
+                [(ngModel)]="user.password"
+                name="password"
+                id="password">
+        </div>
+        <br>
+        <div class="form-row text-center">
+          <div class="buttons">
+              <div class="form-row text-center">
+                  <button class="btn btn-md btn-info btn-block btn-login"
+                          (click)="login(user)">
+                      Login
+                  </button>
+              </div>
+              <!-- <div ng-if="$ctrl.allowSignup" class="form-row text-center">
+                  <a ng-click="$ctrl.$reject()" ui-sref="login.signup" class="signup-link" role="button">
+                      {{ 'SESSION.SIGN_UP_BUTTON' | translate }}
+                  </a>
+              </div> -->
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="col-md-4"></div>
+</div>

@@ -8,10 +8,11 @@ export const appState = {
 
 export const loginState = {
     name: 'login',
-    url: 'login',
+    url: '/login',
     component: LoginComponent
 }
 
 export const APP_STATES = [
-    appState
+    appState,
+    loginState
 ];
