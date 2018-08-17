@@ -3,6 +3,7 @@ import { LoginComponent } from "./login/login/login.component";
 
 export const appState = {
     name: 'app',
+    url: '',
     component: AppComponent
 };
 

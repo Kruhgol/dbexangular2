@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { StateService } from '@uirouter/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private $state: StateService) { }
 
   login(user: any) {
     let data: Array<string> = [];
@@ -18,12 +19,11 @@ export class AuthService {
     return this.http.post('http://test.dbex.org/api/token', data.join('&') , {
       headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')
     }).subscribe(data => {
-      console.log(data);
       window.localStorage.setItem('appStorageData', JSON.stringify(data));
-        console.log(data);
-        return this.http.get('http://test.dbex.org/api' + '/company/' + data.companyId + '/project/26', {
+        this.$state.go('app');
+        // return this.http.get('http://test.dbex.org/api' + '/company/' + data.companyId + '/project/26', {
           
-        }).subscribe(data => console.log(7777, data))
+        // }).subscribe(data => console.log(7777, data))
     });
   }
 }
