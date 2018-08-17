@@ -1,0 +1,423 @@
+﻿.navbar-brand {
+    background-image: url(../../img/axpo-logo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.navbar-inverse {
+    background-color: #fff;
+    border-color: #dadada;
+}
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
+    color: #e10019;
+    background: #f7f7f7;
+}
+.navbar-inverse .navbar-nav>li>a.active, .navbar-inverse .navbar-nav>li>a.active:hover {    
+    color: #e10019; 
+    background: #f7f7f7;
+    border-right: 1px solid #dadada;
+    border-left: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+}
+.header-menu .main-nav li a {
+    color: #000;
+}
+.project-menu .heading {
+    color: #000;
+}
+.project-menu .ui-select-bootstrap .ui-select-choices-row>a {
+    color: #000;
+}
+.project-menu .ui-select-bootstrap .ui-select-choices-row.active>a {
+    color: #e10019;
+}
+#footer {
+    background: #575a5d;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+.row-breadcrumb .btn-breadcrumb .btn {
+    border:none;
+    color: #585858;
+    text-decoration: underline;
+    background: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.row-breadcrumb .btn-breadcrumb .btn:hover, .row-breadcrumb .btn-breadcrumb .btn:first-child:hover {
+    color: #e10019;
+}
+.row-breadcrumb .btn-breadcrumb .btn:after {
+    border:none;
+    display:inline-block;
+    background: url(../../img/breadcrumb-divider-axpo.png) -7px -10px no-repeat;
+}
+.row-breadcrumb .btn-breadcrumb .btn:first-child {
+    color: #585858;
+    text-decoration: none;
+}
+.row-breadcrumb .btn-breadcrumb .btn:last-child {
+    color: #585858;
+    text-decoration: none;
+}
+.language-menu .text, .language-menu .caret {
+    color: #000;
+}
+.language-menu .dropdown-menu {
+    background-color: #f7f7f7;
+    right: 0;
+    left: auto !important;
+}
+.navbar-inverse .dropdown-menu>li>a, .navbar-inverse .dropdown-menu>li>a:focus {
+    color: #000;
+}
+.navbar-inverse .dropdown-menu>li>a:hover, .navbar-inverse .dropdown-menu>.active>a, .navbar-inverse .dropdown-menu>.active>a:hover {
+    background-color: #f7f7f7;
+    color: #e10019;
+}
+.dropdown .dropdown-toggle:hover, .dropdown .dropdown-toggle:focus, .dropdown .dropdown-toggle:active,
+.dropdown .dropdown-toggle.active, .dropdown.open .dropdown-toggle.btn-default {
+    color: #e10019;
+    background-color: #f7f7f7;
+    border: none;
+}
+.dropdown.open .dropdown-toggle.btn-default .text {
+    color: #e10019;
+}
+.dropdown .dropdown-toggle .text {
+    color: #000;
+}
+.dropdown .dropdown-toggle:hover .text, .dropdown .dropdown-toggle.active .text, .dropdown .dropdown-toggle:focus .text {
+    color: #000;
+}
+.logout-menu button .text, .logout-menu .dropdown-menu li a, .logout-menu .dropdown-menu li a:focus {
+    color: #000;
+}
+.logout-menu .dropdown-menu li a {
+    text-align: left;
+}
+.logout-menu button .caret {
+    color: #000;
+}
+.logout-menu .dropdown-menu {
+    background-color: #f7f7f7;
+}
+.logout-menu .user-icon {
+    display: inline-block;
+    background: url(../../img/user-icon-black.png) center no-repeat;
+}
+.project-menu .dropdown-menu {
+    background-color: #fff;
+}
+.projects-menu .dropdown-toggle .caret, .reports-menu .dropdown-toggle .caret {
+    color: #000;
+}
+.navbar-inverse .navbar-nav>li.active>div.dropdown>.dropdown-toggle {
+    background: #f7f7f7;
+    border-right: 1px solid #dadada;
+    border-left: 1px solid #dadada;
+}
+.navbar-inverse .navbar-nav>li.active>div.dropdown>.dropdown-toggle>.text {
+    color: #e10019;
+}
+.btn-bordered {
+    background: transparent;
+    border: 1px solid #ccc;
+    color: #000;
+}
+.btn-bordered:hover {
+    background-color: #f7f7f7;
+    color: #e10019;
+    border-color: #ccc;
+}
+i.btn-icon, .project-menu .project-icon {
+    display: inline-block;
+    background-image: url(../../img/axpo-buttons.png);
+    background-repeat: no-repeat;
+}
+i.btn-icon.generate-report-ico {
+    background-position: 0 -360px;
+}
+.projects-menu i.btn-icon.btn-import {
+    background-position: -24px -384px;
+}
+.panel-body .form-row.header-row {
+    color: #e10019;
+}
+.doc-phrases-table a {
+    color: #000;
+}
+.doc-phrases-table a:hover {
+    color: #e10019;
+}
+.table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 1px solid #dadada;
+    color: #e10019;
+}
+.modal-body.panel-body .form-row.view-row .text {
+    display: table-cell;
+    vertical-align: top;
+}
+.panel-body .form-row .panel-label, .aside-body .form-row .panel-label {
+    display: inline-block;
+    color: #8d8d8d;
+    border: 1px solid #dadada;
+}
+.grid-tabs ul li a {
+    display: inline-block;
+    color: #000;
+    cursor: pointer;
+}
+.project-button {
+    display: inline-block;
+	background: #f7f7f7;
+    text-decoration: none;
+    border: 1px solid #575757;
+}
+.project-button:hover {
+    border-color: #575757;
+    background-color: #fff;
+    text-decoration: none;
+}
+.project-button i {
+    color: #000;
+}
+.project-button h3 {
+    color: #000;
+}
+.project-button:hover h3 {
+    text-decoration: none;
+}
+.project-button:hover i {
+    color: #e10019;
+}
+.btn-group.btn-switcher .btn-default.active {
+    color: #e10019;
+    font-weight: bold;
+}
+.btn-group.btn-switcher .buttons-divider {
+    float: left;
+    color: #e10019;
+    font-weight: bold;
+}
+.multiSelect .select label {
+    color: #e10019;
+}
+#doc-contents .contents-table-body thead tr th a, #doc-contents .contents-table-body thead tr th span {
+    color: #e10019;
+}
+#doc-contents .contents-table-body thead tr th a:hover {
+    color: #e10019;
+    text-decoration: underline;
+}
+.ui-select-tree div.selection:hover {
+    background-color: #f7f7f7;
+}
+.tab-pane .form-panel .form-row.editor-row.section-name .section-label label {
+    color: #000;
+}
+.table>thead>tr>td.active, .table>tbody>tr>td.active, .table>tfoot>tr>td.active, .table>thead>tr>th.active, .table>tbody>tr>th.active, .table>tfoot>tr>th.active, .table>thead>tr.active>td, .table>tbody>tr.active>td, .table>tfoot>tr.active>td, .table>thead>tr.active>th, .table>tbody>tr.active>th, .table>tfoot>tr.active>th {
+    background-color: #f7f7f7;
+}
+.panel-title>a.collapse-group-btn {
+    color: #000;
+}
+.panel-title>a.collapse-group-btn:hover {
+    color: #e10019;
+}
+.input-clear input + .clear .fa {
+    color: #e10019;
+}
+.inner-row .label-cell {
+    color: #e10019;
+}
+.ta-root .ta-toolbar .btn-group .btn:hover, .ta-root .ta-toolbar .btn-group .btn.active {
+    background-color: transparent;
+    border: 1px solid #dadada;
+    color: #e10019;
+}
+.ta-root .ta-toolbar .btn-group .btn i.fa-list-ol {
+    color: inherit;
+}
+.panel-body .form-row.view-row div.binding-level-select .text {
+    display: inline-block;
+}
+.form-control:focus {
+    border-color: #000;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(0,0,0,0.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(0,0,0,0.6);
+}
+.contents-table-body .expand-btn {
+    color: #333;
+}
+.contents-table-body .expand-btn:hover {
+    color: #e10019;
+}
+.ui-select-bootstrap .ui-select-choices-row.active>a {
+    color: inherit;
+    text-decoration:none;
+    outline:0;
+    background-color: #f7f7f7;
+}
+.homepage h2 {
+    color: #000;
+}
+.homepage .text-primary {
+    color: #000;
+}
+.login-box .form-row .btn-info {
+    color: #e10019;
+    background-color: transparent;
+    border-color: #ccc;
+}
+.login-box .form-row .btn-info:hover, .login-box .form-row .btn-info:focus, .login-box .form-row .btn-info:active {
+    color: #ca151c;
+    background-color: #f7f7f7;
+}
+.login-box .form-row .btn-dark-blue {
+    color: #ffffff;
+    background-color: #8d8d8d;
+    border-color: #888;
+}
+.login-box .form-row .btn-dark-blue:hover, .login-box .form-row .btn-dark-blue:focus, .login-box .form-row .btn-dark-blue:active {
+    background-color: #888;
+}
+.navigation-menu .login-box .signup-link {
+    color: #3b3b3b;
+}
+.btn-dark-blue, .btn-primary {
+    color: #ffffff;
+    background-color: #231f20;
+    border-color: #231f20;
+}
+.btn-dark-blue:hover, .btn-primary:hover {
+    background-color: #393435;
+    color: #ffffff;
+}
+.btn-dark-blue:focus, .btn-primary:focus {
+    color: #ffffff;
+}
+.btn-primary[disabled] {
+    opacity: 0.5;
+    background-color: #393435;
+    border-color: #393435;
+}
+.btn-dark-blue i.btn-icon.edit {
+    background-position: -24px -360px;
+}
+.aside .aside-dialog .aside-header {
+    border-bottom: 1px solid #e5e5e5;
+    background: #575a5d;
+    color: #fff;
+}
+.styles-list li {
+    border-bottom: 1px solid #dadada;
+    cursor: pointer;
+    color: #000;
+    position: relative;
+}
+.styles-list li:hover {
+    background-color: #f7f7f7;
+}
+.styles-list li.active {
+    background-color: #f7f7f7;
+    color: #e10019;
+}
+.styles-list li.active .btn-delete .btn-icon {
+    background-position: -24px -168px;
+}
+.home-page h1 {
+    color: #000;
+}
+.homepage .btn-info {
+    color: #e10019;
+    background-color: transparent;
+    border-color: #ccc;
+}
+.homepage .btn-info:hover {
+    color: #ca151c;
+    background-color: #f7f7f7;
+}
+.login-holder form .login-box .form-row input {
+    border: 1px solid #ccc;
+}
+.navigation-menu .login-box .form-row input, .login-holder form .login-box .form-row input {
+    border-color: #333;
+}
+.dropdown .dropdown-toggle {
+    background-color: #fff;
+}
+.content, .page-wrapper, .navbar-inverse {
+    background-color: #fff;
+    background: #fff;
+}
+.footer-select label {
+    color: #8d8d8d;
+}
+.login-holder form .login-box .form-row input.username {
+    background: #fff url(../../img/input-icons-black.jpg) no-repeat;
+    background-position: 0 0;
+    padding-left:55px;
+}
+.login-holder form .login-box .form-row input.password {
+    background: #fff url(../../img/input-icons-black.jpg) no-repeat;
+    background-position: 0 -48px;
+    padding-left:55px;
+}
+.login-holder form .login-box .form-row input.email {
+    background: #fff url(../../img/input-icons-black.jpg) no-repeat;
+    background-position: 0 -96px;
+    padding-left:55px;
+}
+.login-holder form .login-box .form-row input.username.required {
+    background: #fff url(../../img/input-icons-required-black.jpg) no-repeat;
+    background-position: 0 0;
+    padding-left:55px;
+}
+.login-holder form .login-box .form-row input.password.required {
+    background: #fff url(../../img/input-icons-required-black.jpg) no-repeat;
+    background-position: 0 -48px;
+    padding-left:55px;
+}
+.login-holder form .login-box .form-row input.email.required {
+    background: #fff url(../../img/input-icons-required-black.jpg) no-repeat;
+    background-position: 0 -96px;
+    padding-left:55px;
+}
+
+.doc-content {
+    padding: 10px 16px 26px;
+}
+.requirements-table .number {
+    width: 8%;
+    float: left;
+}
+.requirements-table .requirement-text {
+    width: 82%;
+    float: left;
+}
+.requirements-table .binding-level {
+    width: 10%;
+    float: left;
+    text-align: center;
+}
+.requirements-table .actions {
+    width: 9%;
+    float: left;
+}
+.resize-columns .requirements-table .number {
+    width: 4%;
+}
+.resize-columns .requirements-table .requirement-text {
+    width: 84%;
+}
+.resize-columns .requirements-table .binding-level {
+    width: 6%;
+}
+.resize-columns .requirements-table .actions {
+    width: 6%;
+}

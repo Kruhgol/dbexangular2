@@ -1,0 +1,239 @@
+
+tree {
+  display: block;
+  float: left;
+  width: 100%;
+
+  .items-container {
+    display: block;
+    float: left;
+    width: 100%;
+  }
+
+  tree-item {
+    display: block;
+    position: relative;
+    width: 100%;
+    float: left;
+    font-size: 14px;
+    margin: 1px 0;
+    cursor: pointer;
+    &:hover {
+      background-color: #f4f4f4;
+    }
+    a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .form-row {
+      margin-top: 0;
+      padding-top: 4px;
+    }
+    .tree-item {
+      padding: 1px 0 0;
+      margin: 0;
+    }
+
+    // white-space: nowrap;
+    text-overflow: ellipsis;
+    z-index: 124;
+    font-family: Arial, sans-serif;
+
+    &.highlight {
+      background-color: #dff0f6;
+    }
+
+    .context-pointer {
+      position: absolute;
+    }
+
+    .reference-number {
+      display: inline-block;
+      float: left;
+      padding: 5px 10px;
+      margin: 0;
+      min-height: 32px;
+      height: auto;
+      font-size: 14px;
+      color: #222;
+      border: 1px solid #dadada;
+      margin-left: -1px;
+    }
+    .form-inline {
+      .reference-position {
+        width: 93%;
+      }
+    }
+
+    .tree-item-controls {
+      width: 10px;
+      vertical-align: middle;
+      display: inline-block;
+
+      .fa {
+        float: none;
+        font-size: 100%;
+        opacity: 0.7;
+      }
+
+      &::after {
+        display: inine-block;
+        content: "";
+        clear: both;
+      }
+    }
+
+    .tree-item-icon {
+      vertical-align: middle;
+      display: inline-block;
+
+      &::after {
+        display: inine-block;
+        content: "";
+        clear: both;
+      }
+
+      .tree-references {
+        color: #fad787;
+      }
+     
+      .tree-document {
+        color: #e61717;
+        opacity: 0.8;
+      }
+
+      .tree-folder {
+        color: #fad787;
+      }
+    }
+
+    .tree-item-text {
+      vertical-align: middle;
+      width: calc(100% - 40px);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .tree-item-count {
+      position: absolute;
+      top: 5px;
+      right: 25px;
+      bottom: 0;
+      color: #3592d7;
+      font-size: 85%;
+    }
+
+    .tree-item-context {
+      position: absolute;
+      top: 6px;
+      right: 2px;
+      bottom: 0;
+      display: none;
+      width: 18px;
+      height: 18px;
+      text-align: center;
+
+      .fa {
+        font-size: 18px;
+        opacity: 0.6;
+        float: none;
+        margin: 0;
+      }
+    }
+
+    &:hover {
+      .tree-item-context {
+        display: block;
+      }
+    }
+
+    /* Expanded tree item */
+    &.tree-item-expanded {
+      .tree-item-controls {
+        .tree-item-expand {
+          display: none;
+        }
+
+        .tree-item-collapse {
+          display: inline-block;
+        }
+      }
+    }
+
+    /* Collapsed tree item */
+    &,
+    &.tree-item-collapsed {
+      .tree-item-controls {
+        .tree-item-expand {
+          display: inline-block;
+        }
+      
+        .tree-item-collapse {
+          display: none;
+        }
+      }
+    }
+    
+    .section-text {
+      display: table;
+      .toc-row-icon, .expand-btn:first-child {
+        display: table-cell !important;
+        vertical-align: top;
+        width: 18px;
+      }
+      .section-text-item {
+        @extend .toc-row-icon;
+        width: auto;
+      }
+      
+    }
+  }
+}
+
+documents-tree {
+  display: block;
+  width: 100%;
+
+  .documents-search {
+    position: relative;
+    padding-right: 15px;
+
+    .documents-search-input {
+      background-position: 0 -153px;
+      padding: 0 35px;
+      height: 30px;
+    }
+
+    .documents-search-icon,
+    .documents-search-clear {
+      position: absolute;
+      transform: translateY(-50%);
+    }
+    
+    .documents-search-icon {
+      left: 5px;
+      top: 50%;
+    }
+
+    .documents-search-clear {
+      right: 0;
+      top: 50%;
+      color: #eb3b2f;
+      padding-right: 15px;
+    }
+  }
+}
+
+.document-action {
+  color: #428bca;
+
+  &.warn {
+    color: #eb3b2f;
+  }
+
+  &.primary {
+    color: #43ab69;
+  }
+}

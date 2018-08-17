@@ -1,0 +1,270 @@
+.navbar-brand {
+  background-image: url(../img/doorman-logo.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 295px;
+  &.classic {
+    background-image: url(../img/doorman-logo.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 295px;
+  }
+  &.safety {
+    background-image: url(../img/doorman-safety-logo.svg);
+  }
+}
+
+.navbar-inverse {
+  background-color: #fff;
+  .navbar-nav > li > a {
+    &:hover, &:focus {
+      color: #3592d7;
+      background-color: #dff0f6;
+    }
+  }
+}
+
+.dropdown {
+  .dropdown-toggle {
+    &:hover, &:focus, &:active, &.active {
+      color: #3592d7;
+      background-color: #dff0f6;
+      margin-bottom: 0;
+    }
+  }
+  &.open .dropdown-toggle.btn-default {
+    color: #3592d7;
+    background-color: #dff0f6;
+    margin-bottom: 0;
+  }
+}
+
+.navbar-inverse {
+  .navigation-menu li.active > a {
+    color: #3592d7;
+    background: #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+    margin-bottom: -1px;
+  }
+  .navbar-nav > li {
+    &.active {
+      > a:hover, > a:focus {
+        color: #3592d7;
+        background: #e9e9e9;
+        border-bottom: 1px solid #e9e9e9;
+        margin-bottom: -1px;
+      }
+    }
+    > a.active {
+      color: #3592d7;
+      background: #e9e9e9;
+      border-bottom: 1px solid #e9e9e9;
+      margin-bottom: -1px;
+      &:hover {
+        color: #3592d7;
+        background: #e9e9e9;
+        border-bottom: 1px solid #e9e9e9;
+        margin-bottom: -1px;
+      }
+    }
+  }
+  .navigation-menu li.active > div.dropdown > .dropdown-toggle {
+    color: #3592d7;
+    background: #e9e9e9;
+    .text {
+      color: #3592d7;
+    }
+  }
+}
+
+.language-menu .dropdown-menu {
+  background-color: #dff0f6;
+}
+
+.dropdown .dropdown-toggle {
+  &:hover .text, &.active .text, &:focus .text {
+    color: #3592d7;
+  }
+}
+
+.logout-menu {
+  .dropdown-menu {
+    background-color: #dff0f6;
+  }
+  .user-icon {
+    background: url(../img/user-icon-black.png) center no-repeat;
+  }
+}
+
+.navbar-inverse .dropdown-menu > li > a:hover {
+  background-color: #b8d0d9;
+  color: #3592d7;
+}
+
+#footer {
+  background: #3592d7;
+  color: #fff;
+}
+
+.row-breadcrumb .btn-breadcrumb .btn {
+  color: #333;
+  &:hover {
+    color: #53b3d3;
+  }
+  &:first-child {
+    &:hover {
+      color: #53b3d3;
+    }
+    color: #3592d7;
+  }
+  &:last-child {
+    color: #333;
+  }
+}
+
+.header-menu .main-nav > li > a {
+  color: #333;
+}
+
+.content {
+  background-color: #fff;
+}
+
+.btn.to-login {
+  background-color: #5caace;
+  &:hover {
+    background-color: #529ec1;
+  }
+}
+
+.btn-dark-blue {
+  color: #ffffff;
+  background-color: #3592d7;
+  border-color: #0d779b;
+  &:hover {
+    background-color: #0b7295;
+    color: #ffffff;
+  }
+  &:focus {
+    color: #ffffff;
+  }
+}
+
+.btn-bordered {
+  border: 1px solid #3592d7;
+  color: #3592d7;
+  &:focus {
+    border: 1px solid #3592d7;
+    color: #3592d7;
+  }
+  &:hover {
+    background-color: #f1f9ff;
+    color: #3592d7;
+    border-color: #b8cfe0;
+  }
+}
+
+.panel-footer .btn .fa {
+  color: #000;
+}
+
+i.btn-icon, .project-menu .project-icon {
+  background-image: url(../img/bircomp-buttons.png);
+}
+
+i.btn-icon {
+  &.btn-login-classic {
+    background-image: url(../img/buttons.png);
+    background-position: 0px -481px;
+  }
+  &.btn-login-safety {
+    background-image: url(../img/buttons.png);
+    background-position: -24px -481px;
+  }
+}
+
+.btn-login i.btn-icon {
+  &.btn-login-classic {
+    background-image: url(../img/buttons.png);
+    background-position: 0px -457px;
+  }
+  &.btn-login-safety {
+    background-image: url(../img/buttons.png);
+    background-position: -24px -457px;
+  }
+}
+
+i.btn-icon {
+  &.analyze-project {
+    background-position: 0 -457px;
+  }
+  &.analyze-material {
+    background-position: -24px -457px;
+  }
+  &.analyze-tool {
+    background-position: 0 -481px;
+  }
+  &.analyze-hazard {
+    background-position: 0 -553px;
+  }
+  &.conformity-analyzer {
+    background-position: -24px -481px;
+  }
+  &.add-fulfillment {
+    background-position: 0px -529px;
+  }
+  &.edit-fulfillment {
+    background-position: 0px -505px;
+  }
+  &.delete-fulfillment {
+    background-position: -24px -505px;
+  }
+}
+
+.panel-body .form-row.header-row, .table > thead > tr > th, .grid-tabs ul li a {
+  color: #3592d7;
+}
+
+#doc-contents .contents-table-body thead tr th {
+  a, span {
+    color: #008cba;
+  }
+  a:hover {
+    color: #00526e;
+  }
+}
+
+.ui-select-tree div.selection:hover {
+  background-color: #dff0f6;
+}
+
+.tab-pane .form-panel .form-row.editor-row.section-name .section-label label {
+  color: #008cba;
+}
+
+.table > {
+  thead > tr > td.active, tbody > tr > td.active, tfoot > tr > td.active, thead > tr > th.active, tbody > tr > th.active, tfoot > tr > th.active, thead > tr.active > td, tbody > tr.active > td, tfoot > tr.active > td, thead > tr.active > th, tbody > tr.active > th, tfoot > tr.active > th {
+    background-color: #dff0f6;
+  }
+}
+
+.panel-title > a.collapse-group-btn {
+  color: #008cba;
+}
+
+.login-modal .form-row input {
+  font-size: 16px;
+  background-color: #fff;
+  border: 1px solid #3592d7;
+  height: 36px;
+  &.username {
+    background: #fff url(../img/input-icons-black.jpg) no-repeat;
+    background-position: 0 -6px;
+    padding-left: 55px;
+  }
+  &.password {
+    background: #fff url(../img/input-icons-black.jpg) no-repeat;
+    background-position: 0 -54px;
+    padding-left: 55px;
+  }
+}

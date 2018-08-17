@@ -1,10 +1,21 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-4 text-center">111111</div>
-        <div class="col-md-4 text-center">222222</div>
-        <div class="col-md-4 text-center">333333</div>
+<div class="page-wrapper">
+    <div class="navbar navbar-inverse" role="navigation">
+        <div>
+            <div id="navbar-header" class="navbar-header">
+                <button class="btn btn-success navbar-toggle">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                </button>
+
+            </div>
+            <div class="header-menu">
+                <div class="navigation-menu"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid content">
+        <!-- <ui-view></ui-view>  here we must use ui-view? but now app component uses in states -->
     </div>
 </div>
-<br><br>
-
-<ui-view></ui-view>
+<div id="footer" class="hidden-print">
+    <p>. Version:</p>
+</div>
