@@ -19,7 +19,11 @@ export class AuthService {
       headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')
     }).subscribe(data => {
       console.log(data);
-        window.localStorage.setItem('appStorageData', JSON.stringify(data));
+      window.localStorage.setItem('appStorageData', JSON.stringify(data));
+        console.log(data);
+        return this.http.get('http://test.dbex.org/api' + '/company/' + data.companyId + '/project/26', {
+          
+        }).subscribe(data => console.log(7777, data))
     });
   }
 }

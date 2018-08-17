@@ -8,6 +8,8 @@ import { APP_STATES } from './app.states';
 import { LoginModule } from './login/login.module';
 import { routerConfigFn } from './router.config';
 import { AppServicesModule } from './app-services/app-services.module';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { AuthInterceptor } from './app-services/classes/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -26,9 +28,12 @@ import { AppServicesModule } from './app-services/app-services.module';
     }),
     LoginModule,
     FormsModule,
-    AppServicesModule
+    AppServicesModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
