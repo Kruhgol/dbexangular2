@@ -10,6 +10,7 @@ import { routerConfigFn } from './router.config';
 import { AppServicesModule } from './app-services/app-services.module';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor } from './app-services/classes/auth.interceptor';
+import { EditorModule } from './editor/editor.module';
 
 @NgModule({
   declarations: [
@@ -21,15 +22,16 @@ import { AuthInterceptor } from './app-services/classes/auth.interceptor';
       states: APP_STATES,
       useHash: true,
       otherwise: '/',
-      config: routerConfigFn
-      otherwise: {
-        state: 'home'
-      }
+      config: routerConfigFn,
+      // otherwise: {
+      //   state: 'home'
+      // }
     }),
     LoginModule,
     FormsModule,
     AppServicesModule,
-    HttpClientModule
+    HttpClientModule,
+    EditorModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
