@@ -1,17 +1,19 @@
 import { EditorViewComponent, EditorDocumentComponent } from "./editor-view.component";
+import { Ng2StateDeclaration } from "@uirouter/angular";
 
-export const editorState = {
+export const editorState: Ng2StateDeclaration = {
     name: 'editor',
     url: '/editor',
-    //parent: 'app',
     component: EditorViewComponent
 };
 
-export const documentState = {
+export const documentState: Ng2StateDeclaration = {
     name: 'editor.document',
     url: '/document',
     views: {
-        content: EditorDocumentComponent
+        'content': {
+            component: EditorDocumentComponent
+        }
     }
 }
 
