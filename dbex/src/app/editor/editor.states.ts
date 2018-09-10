@@ -3,8 +3,14 @@ import { Ng2StateDeclaration } from "@uirouter/angular";
 
 export const editorState: Ng2StateDeclaration = {
     name: 'editor',
+    parent: 'app',
     url: '/editor',
-    component: EditorViewComponent
+    //component: EditorViewComponent
+    views: {
+        'app': {
+            component: EditorViewComponent
+        }
+    }
 };
 
 export const documentState: Ng2StateDeclaration = {

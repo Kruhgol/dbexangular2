@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 
-import { AppComponent } from './app.component';
+import { AppComponent, AppContentComponent } from './app.component';
 import { UIRouterModule } from '@uirouter/angular';
 import { APP_STATES } from './app.states';
 import { LoginModule } from './login/login.module';
@@ -14,7 +14,8 @@ import { EditorModule } from './editor/editor.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AppContentComponent
   ],
   imports: [
     BrowserModule,
