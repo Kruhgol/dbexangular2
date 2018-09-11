@@ -1,0 +1,18 @@
+<div style="margin-left: 20px; font-size: 20px">
+  <span *ngIf="!item.isDocument">
+      <span *ngIf="!item.isOpen" (click)="item.isOpen = !item.isOpen">+</span>
+      <span *ngIf="item.isOpen" (click)="item.isOpen = !item.isOpen">-</span>
+      <span>{{item.name}}</span>
+  </span>
+  <span *ngIf="item.isDocument">
+    <span>*</span>
+    <a uiSref=".document" [uiParams]="{documentId: item.id}" uiSrefActive="selected">
+      {{item.name}}
+      <span *ngIf="item.revision">({{item.revision}})</span>
+    </a>
+  </span>
+</div>
+<div *ngIf="!item.isDocument && item.isOpen" style="margin-left: 20px;">
+    <editor-tree-folder *ngFor="let childItem of item.children"
+                        [item]="childItem"></editor-tree-folder>
+</div>

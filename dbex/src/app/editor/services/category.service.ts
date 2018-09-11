@@ -15,6 +15,6 @@ export class CategoryService {
 
   getDocuments() {
     console.log(2222222);
-    return this.http.get('http://test.dbex.org/api/category');
+    return this.http.post('http://test.dbex.org/api/category/documentsbyfilter', {});
   }
 }

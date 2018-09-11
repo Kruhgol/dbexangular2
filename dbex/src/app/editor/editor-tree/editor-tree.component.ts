@@ -12,14 +12,13 @@ export class EditorTreeComponent implements OnInit, OnChanges {
 
   constructor(private category: CategoryService) { }
 
+  treeData: Array<any> = [];
+
   ngOnInit() {
   }
 
   ngOnChanges() {
-      console.log('----onChanges----', this.name, this.tree);
       this.tree
-          .subscribe(data => console.log('----data----', data))
-
+          .subscribe(data => this.treeData = data);
   }
-
 }

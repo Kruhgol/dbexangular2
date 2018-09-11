@@ -1,9 +1,4 @@
-<div>
-  editor-tree works!
-  <h1>documents - {{documents}}</h1>
-  <li *ngFor="let person of documents">
-    <a uiSref="person" [uiParams]="{ personId: person.id }">
-      {{person.name}}
-    </a>
-  </li>
+<div style="position: absolute; z-index: 5">
+  <editor-tree-folder *ngFor="let item of treeData"
+                      [item]="item"></editor-tree-folder>
 </div>

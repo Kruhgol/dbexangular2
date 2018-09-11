@@ -1,0 +1,138 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">Document Description</h4>
+    </div>
+    <div class="panel-body">
+        <form novalidate name="documentForm">
+            <div class="form-row">
+                <div class="col-md-6">
+                    <label class="panel-label col-md-4 no-right-border" for="category">Category</label>
+                    <div class="col-md-8 form-control-group">
+                        <input type="text"
+                                id="category"
+                                name="category"
+                                class="panel-control col-md-12"/>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label class="panel-label col-md-4 no-right-border" for="documentType">Document type</label>
+                    <div class="col-md-8 form-control-group">
+                        <!-- <ui-select name="documentType"
+                                    id="documentType"
+                                    ng-model="$ctrl.documentCopy.documentTypeId"
+                                    ng-disabled="!$ctrl.editMode"
+                                    theme="bootstrap"
+                                    ng-required="true">
+                            <ui-select-match placeholder="{{ 'DOCUMENT.FORM.SELECT_DOCUMENT_TYPE' | translate }}">
+                                <span ng-bind-html="$select.selected.name + ': ' + $select.selected.description"></span>
+                            </ui-select-match>
+                            <ui-select-choices repeat="docType.id as docType in $ctrl.documentTypes">
+                                <span class="list-group-item-heading"
+                                        ng-bind-html="docType.name + ': ' + docType.description | highlight: $ctrl.documentCopy.documentTypeId">
+                                </span>
+                            </ui-select-choices>
+                        </ui-select> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-md-6">
+                    <label class="panel-label col-md-4 no-right-border" for="number">Number</label>
+                    <div class="col-md-8 form-control-group">
+                        <input type="text"
+                                id="number"
+                                name="number"
+                                [(ngModel)]="document.number"
+                                class="panel-control col-md-12">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label class="panel-label col-md-4" for="revision">Revision</label>
+                    <div class="col-md-8 form-control-group">
+                        <input type="text"
+                                id="revision"
+                                name="revision"
+                                [(ngModel)]="document.revision"
+                                class="panel-control col-md-12">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-md-6">
+                    <label class="panel-label col-md-4" for="publishingDate">Publishing date</label>
+                    <div class="col-md-8 form-control-group">
+                        <input type="text"
+                                id="publishingDate"
+                                name="publishingDate"
+                                [(ngModel)]="document.publishingDate"
+                                class="panel-control col-md-12">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label class="panel-label col-md-4" for="revisionDate">Document status</label>
+                    <div class="col-md-8 form-control-group">
+                        <input type="text"
+                                id="revisionDate"
+                                name="revisionDate"
+                                [(ngModel)]="document.revisionDate"
+                                class="panel-control col-md-12">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-md-6">
+                    <label class="panel-label col-md-4" for="issuingOrg">Organization</label>
+                    <div class="col-md-8 form-control-group">
+                        <input type="text"
+                                id="issuingOrg"
+                                name="issuingOrg"
+                                [(ngModel)]="document.issuingOrg"
+                                class="panel-control col-md-12">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label class="panel-label col-md-4" for="author">Author</label>
+                    <div class="col-md-8 form-control-group">
+                        <input type="text"
+                                id="author"
+                                name="author"
+                                [(ngModel)]="document.author"
+                                class="panel-control col-md-12">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div ng-class="documentForm.validUntil && 'col-md-6'">
+                    <label class="panel-label" for="title">Title</label>
+                    <div class="form-control-group">
+                        <input type="text"
+                                id="title"
+                                name="title"
+                                [(ngModel)]="document.title"
+                                class="panel-control col-md-12">
+                    </div>
+                </div>
+
+                <!-- <document-new-version is-editable="$ctrl.editMode"
+                                        document-form="documentForm"
+                                        document="$ctrl.documentCopy">
+                </document-new-version> -->
+
+            </div>
+            <div class="form-row">
+                <label class="panel-label col-md-2 no-right-border" for="file">File</label>
+                <div class="col-md-4 form-control-group">
+                    <input type="text"
+                            id="file"
+                            name="file"
+                            placeholder="no uploaded file"
+                            class="panel-control col-md-12">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
