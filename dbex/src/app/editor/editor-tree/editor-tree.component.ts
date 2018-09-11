@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { CategoryService } from '../services/category.service';
 
 @Component({
@@ -6,13 +6,20 @@ import { CategoryService } from '../services/category.service';
   templateUrl: './editor-tree.component.html',
   styleUrls: ['./editor-tree.component.scss']
 })
-export class EditorTreeComponent implements OnInit {
+export class EditorTreeComponent implements OnInit, OnChanges {
+  @Input() name;
+  @Input() tree;
 
   constructor(private category: CategoryService) { }
 
   ngOnInit() {
-    console.log('------fjhfjhfjfjfjfjfjfjf-----')
-    this.category.getTree();
+  }
+
+  ngOnChanges() {
+      console.log('----onChanges----', this.name, this.tree);
+      this.tree
+          .subscribe(data => console.log('----data----', data))
+
   }
 
 }

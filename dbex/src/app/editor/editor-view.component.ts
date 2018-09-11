@@ -1,11 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component ({
     selector: 'editor-view',
     templateUrl: '/editor-view.component.html',
 })
-export class EditorViewComponent {
-    //title = 'app';
+export class EditorViewComponent implements OnInit{
+    @Input() documents;
+
+    constructor() {}
+
+    name: string = 'new document name';
+
+    ngOnInit() {
+    }
 }
 
 @Component ({
@@ -13,5 +20,4 @@ export class EditorViewComponent {
     template: '<h1>hello document</h1>',
 })
 export class EditorDocumentComponent {
-    //title = 'app';
 }

@@ -1,16 +1,25 @@
 import { EditorViewComponent, EditorDocumentComponent } from "./editor-view.component";
 import { Ng2StateDeclaration } from "@uirouter/angular";
+import { CategoryService } from "./services/category.service";
 
 export const editorState: Ng2StateDeclaration = {
     name: 'editor',
     parent: 'app',
     url: '/editor',
-    //component: EditorViewComponent
     views: {
         'app': {
             component: EditorViewComponent
         }
-    }
+    },
+    resolve: [
+        {
+            token: 'documents',
+            deps: [CategoryService],
+            resolveFn: category => {
+                return category.getDocuments();
+            }
+        }
+    ]
 };
 
 export const documentState: Ng2StateDeclaration = {

@@ -12,4 +12,9 @@ export class CategoryService {
     return this.http.get('http://test.dbex.org/api/category')
       .subscribe(data => console.log(22222, data));
   }
+
+  getDocuments() {
+    console.log(2222222);
+    return this.http.get('http://test.dbex.org/api/category');
+  }
 }
