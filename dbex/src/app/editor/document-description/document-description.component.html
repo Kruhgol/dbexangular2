@@ -3,7 +3,7 @@
         <h4 class="panel-title">Document Description</h4>
     </div>
     <div class="panel-body">
-        <form novalidate name="documentForm">
+        <form novalidate name="documentForm" [formGroup]="documentForm">
             <div class="form-row">
                 <div class="col-md-6">
                     <label class="panel-label col-md-4 no-right-border" for="category">Category</label>
@@ -43,7 +43,7 @@
                         <input type="text"
                                 id="number"
                                 name="number"
-                                [(ngModel)]="document.number"
+                                formControlName="number"
                                 class="panel-control col-md-12">
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                         <input type="text"
                                 id="revision"
                                 name="revision"
-                                [(ngModel)]="document.revision"
+                                formControlName="revision"
                                 class="panel-control col-md-12">
                     </div>
                 </div>
@@ -66,7 +66,7 @@
                         <input type="text"
                                 id="publishingDate"
                                 name="publishingDate"
-                                [(ngModel)]="document.publishingDate"
+                                formControlName="publishingDate"
                                 class="panel-control col-md-12">
                     </div>
                 </div>
@@ -76,7 +76,7 @@
                         <input type="text"
                                 id="revisionDate"
                                 name="revisionDate"
-                                [(ngModel)]="document.revisionDate"
+                                formControlName="revisionDate"
                                 class="panel-control col-md-12">
                     </div>
                 </div>
@@ -89,7 +89,7 @@
                         <input type="text"
                                 id="issuingOrg"
                                 name="issuingOrg"
-                                [(ngModel)]="document.issuingOrg"
+                                formControlName="issuingOrg"
                                 class="panel-control col-md-12">
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                         <input type="text"
                                 id="author"
                                 name="author"
-                                [(ngModel)]="document.author"
+                                formControlName="author"
                                 class="panel-control col-md-12">
                     </div>
                 </div>
@@ -112,7 +112,7 @@
                         <input type="text"
                                 id="title"
                                 name="title"
-                                [(ngModel)]="document.title"
+                                formControlName="title"
                                 class="panel-control col-md-12">
                     </div>
                 </div>

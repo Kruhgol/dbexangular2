@@ -6,7 +6,7 @@ import { EditorViewComponent, EditorDocumentComponent } from './editor-view.comp
 import { EditorTreeComponent } from './editor-tree/editor-tree.component';
 import { EditorTreeFolderComponent } from './editor-tree-folder/editor-tree-folder.component';
 import { DocumentDescriptionComponent } from './document-description/document-description.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -14,7 +14,8 @@ import { FormsModule } from '@angular/forms';
     UIRouterModule.forChild({
       states: EDITOR_STATES,
     }),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     EditorViewComponent,
