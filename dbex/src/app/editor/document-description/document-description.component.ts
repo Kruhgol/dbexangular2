@@ -11,8 +11,8 @@ export class DocumentDescriptionComponent implements OnInit {
   constructor() { }
 
   //category: FormControl = new FormControl();
-  formFields: Array<string> = ['number', 'revision', 'publishingDate', 'revisionDate',
-    'issuingOrg', 'author', 'title'];
+  formFields: Array<string> = ['number', 'revision', 'issuingOrg', 'author', 'title'];
+  formDateFields: Array<string> = ['publishingDate', 'revisionDate'];
 
   documentForm: FormGroup = new FormGroup({
     number: new FormControl(null, [Validators.required, Validators.maxLength(20)]),
@@ -35,5 +35,9 @@ export class DocumentDescriptionComponent implements OnInit {
     this.formFields.forEach(field => {
       this.documentForm.controls[field].patchValue(this.document[field]);
     });
+
+    this.formDateFields.forEach(field => {
+      this.documentForm.controls[field].patchValue(new Date(this.document[field]);
+    })
   }
 }

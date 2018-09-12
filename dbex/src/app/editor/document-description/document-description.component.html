@@ -67,7 +67,9 @@
                                 id="publishingDate"
                                 name="publishingDate"
                                 formControlName="publishingDate"
-                                class="panel-control col-md-12">
+                                bsDatepicker
+                                [bsConfig]="{dateInputFormat: 'DD.MM.YYYY', containerClass: 'theme-blue'}"
+                                class="panel-control col-md-12 form-control">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -77,6 +79,8 @@
                                 id="revisionDate"
                                 name="revisionDate"
                                 formControlName="revisionDate"
+                                bsDatepicker
+                                [bsConfig]="{dateInputFormat: 'DD.MM.YYYY'}"
                                 class="panel-control col-md-12">
                     </div>
                 </div>

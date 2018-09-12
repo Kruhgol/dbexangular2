@@ -7,6 +7,7 @@ import { EditorTreeComponent } from './editor-tree/editor-tree.component';
 import { EditorTreeFolderComponent } from './editor-tree-folder/editor-tree-folder.component';
 import { DocumentDescriptionComponent } from './document-description/document-description.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BsDatepickerModule } from 'ngx-bootstrap';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
       states: EDITOR_STATES,
     }),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BsDatepickerModule.forRoot()
   ],
   declarations: [
     EditorViewComponent,
