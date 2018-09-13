@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
+import { RestangularModule, Restangular } from 'ngx-restangular';
 
 import { AppComponent, AppContentComponent } from './app.component';
 import { UIRouterModule } from '@uirouter/angular';
@@ -11,6 +12,12 @@ import { AppServicesModule } from './app-services/app-services.module';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor } from './app-services/classes/auth.interceptor';
 import { EditorModule } from './editor/editor.module';
+
+export function RestangularConfigFactory (RestangularProvider) {
+  RestangularProvider.setBaseUrl('http://test.dbex.org/api');
+  let storage = JSON.parse(window.localStorage.getItem('appStorageData'));
+  RestangularProvider.setDefaultHeaders({'Authorization': 'Bearer ' + storage.access_token});
+}
 
 @NgModule({
   declarations: [
@@ -32,7 +39,8 @@ import { EditorModule } from './editor/editor.module';
     FormsModule,
     AppServicesModule,
     HttpClientModule,
-    EditorModule
+    EditorModule,
+    RestangularModule.forRoot(RestangularConfigFactory)
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}

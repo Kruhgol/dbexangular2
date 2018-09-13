@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Restangular } from 'ngx-restangular';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DocumentService {
-  constructor(private http: HttpClient) { }
+  constructor(private restangular: Restangular) { }
 
   get(id) {
-    console.log('--get document--', id);
-    return this.http.get('http://test.dbex.org/api/documents/' + id);
+    return this.restangular.one('documents', id).get();
   }
 }

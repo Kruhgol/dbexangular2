@@ -26,7 +26,10 @@ export class DocumentDescriptionComponent implements OnInit {
 
   ngOnInit() {
     this.document
-      .subscribe((data) => this.initForm(data));
+      .subscribe((data) => {
+        console.log('restdocument - ', data);
+        this.initForm(data)
+      });
   }
 
   initForm(data) {
@@ -37,7 +40,7 @@ export class DocumentDescriptionComponent implements OnInit {
     });
 
     this.formDateFields.forEach(field => {
-      this.documentForm.controls[field].patchValue(new Date(this.document[field]);
+      this.documentForm.controls[field].patchValue(new Date(this.document[field]));
     })
   }
 }

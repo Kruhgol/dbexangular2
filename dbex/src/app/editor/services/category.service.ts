@@ -1,20 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Restangular } from 'ngx-restangular';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoryService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private restangular: Restangular) {}
 
   getTree() {
-    console.log(1111111111111);
-    return this.http.get('http://test.dbex.org/api/category')
+    return this.restangular.all('category').getList()
       .subscribe(data => console.log(22222, data));
   }
 
   getDocuments() {
-    console.log(2222222);
-    return this.http.post('http://test.dbex.org/api/category/documentsbyfilter', {});
+    return this.restangular.one('category').post('documentsbyfilter', {});
   }
 }
